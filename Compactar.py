@@ -1,6 +1,5 @@
 # Grupo: Francisco Geibson Saraiva De Oliveira Frutuoso, José Ivanilson Marinho Da Silva, Kléber Lucas Lopes Alves, Yuri Filgueira de Souza
 
-
 from collections import Counter
 import heapq
 import os
@@ -41,3 +40,6 @@ def compactar_arquivo(input_path, output_path):
         for i in range(0, len(codigo_compactado), 8):
             byte = int(codigo_compactado[i:i+8], 2)
             f.write(bytes([byte]))
+
+# Execução da compactação
+compactar_arquivo('teste.txt', 'teste.uzip')
